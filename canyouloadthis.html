@@ -1,0 +1,50 @@
+html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div id="introScreen">
+      <h1 id="gameTitle">Election Life</h1>
+      <button id="startButton" onclick="startGame()">Start Game</button>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
+
+html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:red;">Create a character</h1>
+
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br>
+
+<label for="party">Political Party:</label><br>
+<select id="party" name="party">
+  <option value="democrat">Democrat</option>
+  <option value="republican">Republican</option>
+  <option value="independent">Independent</option>
+</select><br>
+
+<label for="fiscal">Fiscal Policy:</label><br>
+<select id="fiscal" name="fiscal">
+  <option value="liberal">Liberal</option>
+  <option value="moderate">Moderate</option>
+  <option value="conservative">Conservative</option>
+</select><br>
+
+<label for="social">Social Policy:</label><br>
+<select id="social" name="social">
+  <option value="liberal">Liberal</option>
+  <option value="moderate">Moderate</option>
+  <option value="conservative">Conservative</option>
+</select><br>
+
+<button onclick="location.href='nextpage.html'">Continue</button>
+
+</body>
+</html>
