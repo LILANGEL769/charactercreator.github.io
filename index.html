@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,41 +7,20 @@ html
             var party = document.getElementById("party").value;
             var points = 0;
 
-            if ((party === "republican") && (
-                (state === "Alabama") ||
-                (state === "Alaska") ||
-                (state === "Arkansas") ||
-                (state === "Idaho") ||
-                (state === "Indiana") ||
-                (state === "Kansas") ||
-                (state === "Kentucky") ||
-                (state === "Louisiana") ||
-                (state === "Mississippi") ||
-                (state === "North Dakota") ||
-                (state === "Oklahoma") ||
-                (state === "South Carolina") ||
-                (state === "South Dakota") ||
-                (state === "Tennessee") ||
-                (state === "Utah") ||
-                (state === "Wyoming")
-            )) {
-                points = 4;
-            } else if ((party === "republican") && (
-                (state === "Georgia") ||
-                (state === "Missouri") ||
-                (state === "Montana") ||
-                (state === "Texas")
-            )) {
-                points = 3;
-            } else if ((party === "republican") && (
-                (state === "Arizona") ||
-                (state === "Iowa") ||
-                (state === "North Carolina") ||
-                (state === "Ohio")
-            )) {
-                points = 2;
-            } else if ((party === "republican") && (state === "Florida")) {
-                points = 1;
+            if (party === "republican") {
+                if ([
+                    "Alabama", "Alaska", "Arkansas", "Idaho", "Indiana", "Kansas", "Kentucky", "Louisiana",
+                    "Mississippi", "North Dakota", "Oklahoma", "South Carolina", "South Dakota", "Tennessee",
+                    "Utah", "Wyoming"
+                ].includes(state)) {
+                    points = 4;
+                } else if (["Georgia", "Missouri", "Montana", "Texas"].includes(state)) {
+                    points = 3;
+                } else if (["Arizona", "Iowa", "North Carolina", "Ohio"].includes(state)) {
+                    points = 2;
+                } else if (state === "Florida") {
+                    points = 1;
+                }
             }
 
             alert("Points: " + points);
