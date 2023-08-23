@@ -1,5 +1,54 @@
+html
 <!DOCTYPE html>
 <html>
+<head>
+    <script>
+        function calculatePoints() {
+            var state = document.getElementById("state-dropdown").value;
+            var party = document.getElementById("party").value;
+            var points = 0;
+
+            if ((party === "republican") && (
+                (state === "Alabama") ||
+                (state === "Alaska") ||
+                (state === "Arkansas") ||
+                (state === "Idaho") ||
+                (state === "Indiana") ||
+                (state === "Kansas") ||
+                (state === "Kentucky") ||
+                (state === "Louisiana") ||
+                (state === "Mississippi") ||
+                (state === "North Dakota") ||
+                (state === "Oklahoma") ||
+                (state === "South Carolina") ||
+                (state === "South Dakota") ||
+                (state === "Tennessee") ||
+                (state === "Utah") ||
+                (state === "Wyoming")
+            )) {
+                points = 4;
+            } else if ((party === "republican") && (
+                (state === "Georgia") ||
+                (state === "Missouri") ||
+                (state === "Montana") ||
+                (state === "Texas")
+            )) {
+                points = 3;
+            } else if ((party === "republican") && (
+                (state === "Arizona") ||
+                (state === "Iowa") ||
+                (state === "North Carolina") ||
+                (state === "Ohio")
+            )) {
+                points = 2;
+            } else if ((party === "republican") && (state === "Florida")) {
+                points = 1;
+            }
+
+            alert("Points: " + points);
+        }
+    </script>
+</head>
 <body>
     <h1 style="color:red;">Create a character</h1>
 
@@ -36,5 +85,9 @@
         <option value="moderate">Moderate</option>
         <option value="conservative">Conservative</option>
     </select>
+
+    <br>
+    <br>
+    <button onclick="calculatePoints()">Calculate Points</button>
 </body>
 </html>
